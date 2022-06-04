@@ -13,7 +13,8 @@ const createDate = (tgl, posisi) => {
   arrayDates = [];
   while (no < tgl.length) {
     let tglEpoch = Date.parse(tgl[no]);
-    arrayDates.push(tglEpoch);
+    let tglEpochinSec = tglEpoch / 1000;
+    arrayDates.push(tglEpochinSec);
     no++;
   }
   if (posisi === undefined) {
