@@ -8,7 +8,21 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (tgl, posisi) => {
+  let no = 0;
+  arrayDates = [];
+  while (no < tgl.length) {
+    let tglEpoch = Date.parse(tgl[no]);
+    arrayDates.push(tglEpoch);
+    no++;
+  }
+  if (posisi === undefined) {
+    return arrayDates.sort().join('-');
+  }
+  else {
+    return arrayDates[posisi].toString();
+  }
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
